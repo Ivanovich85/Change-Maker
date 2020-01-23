@@ -1,0 +1,36 @@
+Change maker program
+
+I start by importing the Scanner class from the Java library. Then inside the main() method I create a Scanner and integer 
+to store the users input. A String to store the statement that will be displayed a boolean value to store whether the user 
+wants to 'run' the program again and a char called run to store the users input on whether they would like to run another 
+number to create change.I assign 'run' by calling the "runProgram()" method and it returns a char of 'y'or'n' for yes or no. 
+Run a (if statement) checking for 'run' == 'y' which if true runs a while loop where the user's input calls a method called 
+"getChangeAmount()". Than "statement" calls the ChangeMarker() method which is then displayed. and 'run' calls "runProgram()"
+to see if the user would like to run the program again. An (if statement) to assign the boolean 'again' to false if the user 
+does not what to make more change. At which time the program is reran inside the while loop. if the user entered an 'n' the 
+(while loop) is closed and the "scanner" is closed ending the program.
+
+getChangeAmount()
+The getChangeAmount() method takes in a scanner obj and returns an integer. Creates an integer result that will be returned. inside
+a (do while) loop the user in prompt to enter a value from 0 to 100 which is assigned to result. An (if statement) checks the value 
+and if the value for between 0 and 100 result is returned. 
+
+runProgram()
+the "runProgram()" takes in a scanner and returns a char. It starts by creating the char result that will be returned at the end.
+a (do while loop) displays a prompt for the user to enter a 'y' or 'n' and storing it in result the an (if statement) checks 
+if a 'y'or'Y'or'n'or'N' was entered and if not loops back to the start of the loop with an message clarifying what is expected input.
+
+changeMaker()
+The changeMaker() method takes in an integer userInput and returns a String obj. I create the String result that will be returned, int to hold 
+number of quarters numQuarters, int to hold number of Dimes numDimes, int to hold number of Nickels numNickels and an int to hold 
+number of Pennies numPennies. The integer that the method takes in is / 25 and assigned to numQuarters there by getting the number of 
+quarters. The userInput that was taken in by the method is % by 25 which returns the remainder and assigning that back to userInput. Than
+userInput is /10 and assigned to numDimes there by getting the number of dimes. The userInput that was taken in by the method is % by 10 
+which returns the remainder and assigning that back to userInput. Than userInput is /5 and assigned to numNickels there by getting the 
+number of nickels. The userInput that was taken in by the method is % by 5 which returns the remainder and assigning that back to userInput. 
+Than userInput is assigned to numPennies. It each instant where the number of a certain coin is found the String result is concatenated with
+the number of that coin if there are any coins to add and if the number of coins in greater then one an "s" or "ies" is added to the coin's 
+name. Then results is returned.
+
+
+
